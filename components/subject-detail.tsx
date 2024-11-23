@@ -11,10 +11,9 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import  VideoCard  from "@/components/common/video-card";
-import {subjectTools} from "@/api/subjects";
+import {Subject, subjectTools} from "@/api/subjects";
 import Link from "next/link";
 
-type Subject = "Mathematics" | "Physics" | "Chemistry" | "Biology" | "Programming Fundamentals" | "Database Management" | "Web Development" | "Data Structures";
 
 export function SubjectDetail({ subject }: { subject: Subject }) {
   const [activeTab, setActiveTab] = useState("content");

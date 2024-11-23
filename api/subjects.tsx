@@ -1,3 +1,6 @@
+export type Subject = "Mathematics" | "Physics" | "Chemistry" | "Biology" | "Programming Fundamentals" | "Database Management" | "Web Development" | "Data Structures";
+
+
 interface Tool {
   name: string;
   url: string;

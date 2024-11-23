@@ -1,8 +1,9 @@
 import { SubjectDetail } from "@/components/subject-detail"
 import { Chat } from "@/components/chat"
+import { Subject } from "@/api/subjects"
 
 export default function SubjectPage({ params }: { params: { name: string } }) {
-  const subjectName = decodeURIComponent(params.name)
+  const subjectName = decodeURIComponent(params.name) as Subject
 
   return (
     <div className="container mx-auto p-8">
