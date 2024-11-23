@@ -14,7 +14,9 @@ import  VideoCard  from "@/components/common/video-card";
 import {subjectTools} from "@/api/subjects";
 import Link from "next/link";
 
-export function SubjectDetail({ subject }: { subject: string }) {
+type Subject = "Mathematics" | "Physics" | "Chemistry" | "Biology" | "Programming Fundamentals" | "Database Management" | "Web Development" | "Data Structures";
+
+export function SubjectDetail({ subject }: { subject: Subject }) {
   const [activeTab, setActiveTab] = useState("content");
 
   return (
@@ -46,7 +48,7 @@ export function SubjectDetail({ subject }: { subject: string }) {
           <TabsContent value="tools">
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-2">
               {subjectTools[subject].tools?.map((tool) => (
-                <Card key={tool}>
+                <Card key={tool.name}>
                   <CardHeader>
                     <CardTitle className="leading-tight">{tool.name}</CardTitle>
                   </CardHeader>

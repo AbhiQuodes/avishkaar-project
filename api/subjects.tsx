@@ -1,3 +1,18 @@
+interface Tool {
+  name: string;
+  url: string;
+}
+
+interface SubjectContent {
+  title: string;
+  url: string;
+}
+
+interface SubjectTools {
+  tools: Tool[];
+  subjectContent: SubjectContent[];
+}
+
 export const courses = [
   { name: "BSc", value: "bsc" },
   { name: "BCA", value: "bca" },
@@ -21,7 +36,7 @@ export const subjects = {
   ],
 };
 
-export const subjectTools = {
+export const subjectTools : Record<string, SubjectTools> = {
   Mathematics: {
     tools: [
       { name: "Calculator", url: "" },
