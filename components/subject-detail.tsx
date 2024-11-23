@@ -26,7 +26,7 @@ export function SubjectDetail({ subject }: { subject: Subject }) {
           Explore content and tools for {subject}
         </CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="p-1.5 lg:p-6" >
         <Tabs value={activeTab} onValueChange={setActiveTab}>
           <TabsList className="mb-2">
             <TabsTrigger value="content">Content</TabsTrigger>
