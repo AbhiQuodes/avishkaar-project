@@ -30,6 +30,7 @@ export function LoginForm() {
       })
       router.push("/dashboard")
     } catch (error) {
+      console.log(error)
       toast({
         title: "Error",
         description: "There was a problem logging into your account.",

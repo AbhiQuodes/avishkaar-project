@@ -39,6 +39,7 @@ export function SignUpForm() {
       })
       router.push("/login")
     } catch (error) {
+      console.log(error)
       toast({
         title: "Error",
         description: "There was a problem creating your account.",
@@ -92,7 +93,7 @@ export function SignUpForm() {
             <SelectContent>
               { courses.map((c) => {
                   return (
-                    <SelectItem value={c.value}>{c.name}</SelectItem>
+                    <SelectItem value={c.value} key={c.name}>{c.name}</SelectItem>
                   )
                 })}
             </SelectContent>

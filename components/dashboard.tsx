@@ -10,7 +10,7 @@ export function Dashboard({ course = "bca" }: { course?: "bsc" | "bca" | "bcs" }
   return (
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
       {subjects[course].map((subject) => (
-        <Card key={subject}>
+        <Card key={subject} >
           <CardHeader>
             <CardTitle>{subject}</CardTitle>
           </CardHeader>

@@ -35,7 +35,7 @@ export function SubjectDetail({ subject }: { subject: string }) {
           <TabsContent value="content">
             {subjectTools[subject].subjectContent.length > 0 ? subjectTools[subject].subjectContent.map((s) => {
               return (
-               <div className="mt-4">
+               <div className="mt-4" key={s.title}>
                     <VideoCard title={s.title} url={s.url} />
                 </div> 
                 
