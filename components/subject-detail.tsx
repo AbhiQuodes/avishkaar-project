@@ -20,13 +20,13 @@ export function SubjectDetail({ subject }: { subject: Subject }) {
 
   return (
     <Card>
-      <CardHeader className="px-2 lg:p-6">
+      <CardHeader className="px-2 md:p-6">
         <CardTitle>{subject}</CardTitle>
         <CardDescription>
           Explore content and tools for {subject}
         </CardDescription>
       </CardHeader>
-      <CardContent className="p-1.5 lg:p-6" >
+      <CardContent className="p-1.5 md:p-6" >
         <Tabs value={activeTab} onValueChange={setActiveTab}>
           <TabsList className="mb-2">
             <TabsTrigger value="content">Content</TabsTrigger>
