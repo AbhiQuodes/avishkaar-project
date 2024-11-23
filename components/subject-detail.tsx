@@ -20,7 +20,7 @@ export function SubjectDetail({ subject }: { subject: Subject }) {
 
   return (
     <Card>
-      <CardHeader>
+      <CardHeader className="px-2 lg:p-6">
         <CardTitle>{subject}</CardTitle>
         <CardDescription>
           Explore content and tools for {subject}
