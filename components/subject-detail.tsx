@@ -52,7 +52,7 @@ export function SubjectDetail({ subject }: { subject: Subject }) {
                     <CardTitle className="leading-tight">{tool.name}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <Link href={"https://abhiquodes.github.io/Code-Converter/"} target="_blank"><Button>Launch Tool</Button></Link>
+                    <Link href={tool.url} target="_blank"><Button>Launch Tool</Button></Link>
                   </CardContent>
                 </Card>
               ))}

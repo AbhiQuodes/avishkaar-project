@@ -18,11 +18,11 @@ export default function VideoCard({ title, url }: VideoCardProps) {
   const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}` : "";
 
   return (
-    <Card className="w-full mx-auto">
-      <CardHeader>
-        <h3 className="text-lg font-semibold">{title}</h3>
+    <Card className="w-full mx-auto ">
+      <CardHeader className="p-4 md:p-6">
+        <h3 className="text-sm lg:text-lg font-semibold">{title}</h3>
       </CardHeader>
-      <CardContent>
+      <CardContent className="p-4 pt-0 md:p-6 md:pt-0">
         {isYouTube ? (
           // Embed YouTube video using iframe
           <div className="relative pt-[56.25%]">
