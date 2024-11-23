@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { BookOpen, GraduationCap, Users, MessageCircle } from 'lucide-react'
+import { ReactNode } from 'react';
 
 export default function Home() {
   return (
@@ -84,7 +85,13 @@ export default function Home() {
   )
 }
 
-function FeatureCard({ icon, title, description }) {
+interface FeatureCardProps {
+  icon: ReactNode;  
+  title: string;   
+  description: string;  
+}
+
+function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     <Card className="transition-all duration-300 hover:shadow-lg">
       <CardHeader>
